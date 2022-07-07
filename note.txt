@@ -1,1 +1,1 @@
-Chạy bằng Visual Studio Code và bắt dầu từ file layout.html
+Chạy bằng Visual Studio Code và chạy từ layout.html
