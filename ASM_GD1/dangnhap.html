@@ -1,0 +1,64 @@
+
+<div class="container">
+ <div class="page-header min-vh-50" style="background-image: url(images/curved19.jpg);  background-repeat: no-repeat; background-position: center;">
+  <div class="contactbanner" >
+    <!-- <img src="images/curved18.png" alt="" style="border-bottom-left-radius: 30%; width: 50%; margin-left: 50%; height: 800px;"> -->
+    <div class="container">
+      <div class="row">
+
+        <div class="col-6  contactbanner1" style="margin:0 auto; margin-top: 6%;">
+          <div class=" border-0  rounded-3 my-5">
+            <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5" style="color: #cb0c9f!important">Đăng Nhập</h5>
+              <form name="frmdn">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" required ng-minlength="1"  placeholder="name@example.com" name="username" ng-model="u">
+                  <label for="floatingInput">Tài khoản</label>
+                  <div ng-show="frmdn.username.$invalid && frmdn.username.$dirty" class="font-italic">
+                    Vui lòng nhập tài khoản
+                  </div> <br>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="floatingPassword" required ng-minlength="1"  placeholder="Mật khẩu" name="password" ng-model="p">
+                  <label for="floatingPassword">Mật khẩu</label>
+                  <div ng-show="frmdn.password.$invalid && frmdn.password.$dirty" class="font-italic">
+                    Vui lòng nhập mật khẩu
+                  </div> <br>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck"  >
+                  <label class="form-check-label" for="rememberPasswordCheck">
+                    nhớ mật khẩu
+                  </label>
+                </div>
+                <div class="d-grid">
+                  <button  class="btn btn-primary btn-login text-uppercase fw-bold w-100" type="submit" ng-click="login()" ng-disabled="frmdn.$invalid">
+                    Đăng nhập
+                  </button>
+                </div>
+                <hr class="my-4">
+                <div class="d-grid mb-2">
+                  <button class="btn btn-google btn-login text-uppercase fw-bold w-100" type="submit">
+                    <i class="fab fa-google me-2"></i> Đăng nhập bằng google
+                  </button>
+                </div>
+                <div class="d-grid">
+                  <button class="btn btn-facebook btn-login text-uppercase fw-bold w-100" type="submit">
+                    <i class="fab fa-facebook-f me-2"></i> Đăng nhập bằng Facebook
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-3"></div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<script src="db/Students.js"></script>

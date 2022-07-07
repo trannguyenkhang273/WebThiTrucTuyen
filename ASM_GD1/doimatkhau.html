@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .btn:not(:disabled):not(.disabled) {
+      cursor: pointer;
+    }
+    .btn.orange {
+    background: #ffb83c;
+    }
+    .featued-list .shadow-box .btn {
+    /* margin-bottom: 29px; */
+    opacity: 0;
+  } 
+
+
+.hover-link {
+    cursor: pointer;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.featued-list .shadow-box:before {
+    content: "";
+    height: 8px;
+    background: transparent;
+    width: 100%;
+    -webkit-transition: all .1s "";
+    -moz-transition: all .1s "";
+    -o-transition: all .1s "";
+    transition: all .1s "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
+<body>
+
+
+  <a href="" data-bs-toggle="modal" data-bs-target="#myModal">askldla</a>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Tài khoản</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5" style="color: #cb0c9f!important">Đổi mật khẩu</h5>
+            <form>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingInput"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Mật khẩu cũ</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword"
+                        placeholder="Mật khẩu">
+                    <label for="floatingPassword">Mật khẩu mới</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword"
+                        placeholder="Mật khẩu">
+                    <label for="floatingPassword">Xác nhận mật khẩu</label>
+                </div>
+
+                <div class="form-check mb-3">
+
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-login text-uppercase fw-bold w-100" type="submit" style="background-image: linear-gradient(310deg,#7928ca,#ff0080);">
+                        Xác nhận
+                    </button>
+                </div>
+                
+            </form>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+
+
+    </div>
+  </div>
+
+
+  
+</div>
+
+<section class="featued-list" id="featued-list">
+  <div class="container">
+      <div class="row justify-content-center">
+              <div class="col-12 col-lg-3 col-sm-12 relative hover-link" onclick="window.location.href='https://tracnghiem.net/de-kiem-tra/'">
+                      <div class="shadow-box">
+                          <div class="img"><img src="https://s.tracnghiem.net/assets/images/home/feature1.jpg" alt="Đề thi học kỳ"/></div>
+                          <h3>Đề thi học kỳ</h3>
+                          <p>Ngân hàng câu hỏi đầy đủ các môn cấp 1,2,3 được trộn tạo đề theo cấu trúc phân loại giúp các em dễ dàng ôn tập online đề thi giữa học kỳ, thi học kỳ theo các chủ đề đã học.</p>
+                          <a href="https://tracnghiem.net/de-kiem-tra/?type=2" class="btn orange">Làm ngay</a>
+                      </div>
+              </div>
+          <div class="col-12 col-lg-3 col-sm-12 relative hover-link" onclick="window.location.href='https://tracnghiem.net/thptqg/'">
+              <div class="shadow-box">
+                  <div class="img"><img src="https://s.tracnghiem.net/assets/images/home/feature2.jpg" alt="Đề thi THPT QG"/></div>
+                  <h3>Đề thi THPT QG</h3>
+                  <p>Tổng hợp đề thi trắc nghiệm online THPT QG của các môn Toán, Tiếng Anh, Vật lý, Hóa học, Sinh học, Địa lý, Lịch sử, GDCD kèm đáp án và lời giải chi tiết.</p>
+                  <a href="https://tracnghiem.net/thptqg/" class="btn orange">Làm ngay</a>
+              </div>
+          </div>
+          <div class="col-12 col-lg-3 col-sm-12 relative hover-link" onclick="window.location.href='https://tracnghiem.net/de-kiem-tra/'">
+              <div class="shadow-box">
+                  <div class="img"><img src="https://s.tracnghiem.net/assets/images/home/feature3.jpg" alt="Đề kiểm tra"/></div>
+                  <h3>Đề kiểm tra</h3>
+                  <p>Hệ thống bài kiểm tra 1 tiết, kiểm tra 15 phút được thiết kế theo hình thức trắc nghiệm online giúp học sinh có thể tạo ra đề tự luyện tập và chấm điểm trực tuyến.
+                  </p>
+                  <a href="https://tracnghiem.net/de-kiem-tra/?type=3" class="btn orange">Làm ngay</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--/FEATURED LIST-->
+</body>
+</html>

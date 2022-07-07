@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg   navbar-light mx-auto col-8 " id="navk" style="z-index: 3; padding-left: 10px;">
+    <ul class="navbar-nav navbl">
+      <li class="navbk">
+        &nbsp;
+        <a class="nav-link float-start " href="layout1.html"><img src="images/trac-nghiem-online.png" width="100px"
+            alt=""></a>
+      </li>
+
+    </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav navbc">
+        <!-- &nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -->
+        <li class="nav-item">
+          <a class="nav-link" href="layout.html">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!trangchu#gioithieu" data-bs-target="#gioithieu">Giới thiệu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!lienhe">Liên hệ </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#demo">Danh mục </a>
+          
+        </li>
+      </ul>
+
+      <ul class="navbar-nav navbl1">
+        <li class="nav-item dropdown" ng-show="taikhoanChinh!=null">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+
+            Tài khoản</a>
+          <ul class="dropdown-menu"
+            style="border-radius: 20px; backdrop-filter: saturate(200%) blur(30px); background-color: hsla(0,0%,100%,.8)!important; ">
+            <a class="dropdown-item"  ng-click="dangxuat()">Đăng xuất</a>
+            <a class="dropdown-item" href="#!capnhattaikhoan">Cập nhật hồ sơ</a>
+           
+
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown"  ng-show="taikhoanChinh==null"> 
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+
+            Tài khoản</a>
+          <ul class="dropdown-menu"
+            style="border-radius: 20px; backdrop-filter: saturate(200%) blur(30px); background-color: hsla(0,0%,100%,.8)!important; ">
+            <a class="dropdown-item" href="#!dangnhap">Đăng nhập</a>
+            <a class="dropdown-item" href="#!dangky">Đăng ký</a>
+            <a class="dropdown-item" href="">Quên mật khẩu</a>
+            
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <button style="margin-right: 15px;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    
+
+    
+  </nav>
+
+  <div class="offcanvas offcanvas-start" id="demo">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title">Danh mục môn học</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <hr>
+    <div class="offcanvas-body ">
+      <!-- <a class="text-dark danhmuc" style="text-decoration: none; font-size: large;" href="#">Lập trình Android nâng cao</a> <br>
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">Xây dựng trang web</a> <br> 
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">Cơ sở dữ liệu</a> <br>
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">SQL Server</a> <br>
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">Internet Marketing</a> <br>
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">Lập trình hướng đối tượng với Java</a> <br>
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">Lập trình PHP</a> <br>
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">Điện toán đám mây</a> <br>
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">Lập trình Android cơ bản</a> <br>
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">Lập trình game 2D</a> <br>
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">Thiết kế giao diện trênAndroid</a> <br>
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">Thiết kế web cho điện thoại di động</a> <br>
+      <a class="text-dark" style="text-decoration: none; font-size: large;" href="#">Lập trình ASP.NET</a>  -->
+        <a href="#!tracnghiem/{{mh.Id}}/{{mh.Name}}" style="text-decoration: none;"  ng-repeat="mh in cacmonhoc">
+      <div class="row text-dark mb-2">
+
+          <div class="col-3">
+          <img src="images/logos/{{mh.Logo}}" alt="" style="width: 50px;"></div>
+          <div class="col-8">
+          <p class="card-text" >{{mh.Name}}.</p></div>
+          <div class="col-1"></div>
+          <br><br>
+          
+      </div>
+      <hr style="color: black;">
+    </div>
+    
+    </a>
+  </div>

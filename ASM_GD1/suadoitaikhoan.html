@@ -1,0 +1,346 @@
+
+<div class="container">
+  <div class="page-header min-vh-50" style="background-image: url(images/curved19.jpg);  background-repeat: no-repeat; background-position: center;">
+<div class="contactbanner"  >
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-6 mx-auto contactbanner1 " style="margin-top: 6%;" >
+                <div class=" border-0  rounded-3 my-5" >
+                    <div class="card-body p-4 p-sm-5">
+                        <h5 class="card-title text-center mb-5 fw-light fs-5" style="color: #cb0c9f!important">Cập nhật tài khoản</h5>
+                        <form>
+                            <div class="row">
+                                <div class=" mb-3 col-3 form-group">
+                                  <b> Họ Và Tên: </b> 
+                                   
+                                </div>
+                                <div class=" mb-3 col-6 form-group">
+                                   {{taikhoanChinh.fullname}}
+                                     
+                                  </div>
+                                <div class=" mb-3 col-3 form-group" >
+                                    <a href="#doiten" class="text-dark" data-bs-toggle="modal" data-bs-target="#doiten">Thay đổi</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class=" mb-3 col-3 form-group">
+                                  <b> Mật khẩu: </b>
+                                </div>
+                                <div class=" mb-3 col-6 form-group">
+                                    ********
+                                      
+                                   </div>
+                                <div class=" mb-3 col-3 form-group" >
+                                    <a href="#doimatkhau" class="text-dark"  data-bs-toggle="modal" data-bs-target="#doimatkhau">Thay đổi</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class=" mb-3 col-3 form-group">
+                                  <b> Email: </b>
+                                </div>
+                                <div class=" mb-3 col-6 form-group">
+                                    {{taikhoanChinh.email}}
+                                      
+                                   </div>
+                                <div class=" mb-3 col-3 form-group" >
+                                    <a href="#doiemail" class="text-dark" data-bs-toggle="modal" data-bs-target="#doiemail">Thay đổi</a>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class=" mb-3 col-3 form-group">
+                                  <b> Giới tính: </b>
+                                </div>
+                                <div class=" mb-3 col-6 form-group">
+                                    {{taikhoanChinh.gender}}
+                                      
+                                   </div>
+                                <div class=" mb-3 col-3 form-group" >
+                                    <a href="#doigioitinh"  class="text-dark" data-bs-toggle="modal" data-bs-target="#doigioitinh">Thay đổi</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class=" mb-3 col-3 form-group">
+                                  <b> Ngày sinh: </b>
+                                </div>
+                                <div class=" mb-3 col-6 form-group">
+                                    {{taikhoanChinh.birthday | date:'dd-MM-yyyy'}}
+                                      
+                                   </div>
+                                <div class=" mb-3 col-3 form-group" >
+                                    <a href="#doingaysinh" class="text-dark" data-bs-toggle="modal" data-bs-target="#doingaysinh">Thay đổi</a>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <br>
+                            <div class="d-grid">
+                                <button ng-click="capnhattk()" class="btn btn-primary btn-login text-uppercase fw-bold w-100" type="submit" style="background-image: linear-gradient(310deg,#7928ca,#ff0080);">
+                                    Cập nhật
+                                </button>
+                            </div>
+                           
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"></div>
+            
+        </div>
+        </div>
+
+</div>  
+  
+</div>
+</div>
+    <!-- đây là cái nút bấm thay đổi -->
+<div class="modal" id="doimatkhau">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Tài khoản</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5" style="color: #cb0c9f!important">Thay đổi  mật khẩu</h5>
+              <form name="sdmk">
+                  <div class="form-floating mb-3">
+                      <input type="password" class="form-control" id="floatingInput" ng-model="mkcu" required ng-minlength="1" name="mkcu"
+                          placeholder="name@example.com">
+                      <label for="floatingInput">Mật khẩu cũ</label>
+                      <div ng-show="sdmk.mkcu.$invalid" class="font-italic">
+                        Vui lòng nhập mật khẩu
+                        </div>
+                  </div>
+                  <div class="form-floating mb-3">
+                      <input type="password" class="form-control" id="floatingPassword" ng-model="mkmoi" required ng-minlength="1" name="mkmoi"
+                          placeholder="Mật khẩu">
+                      <label for="floatingPassword">Mật khẩu mới</label>
+                      <div ng-show="sdmk.mkmoi.$invalid" class="font-italic">
+                        Vui lòng nhập mật khẩu
+                        </div>
+                  </div>
+                  <div class="form-floating mb-3">
+                      <input type="password" class="form-control" id="floatingPassword" ng-model="mkxacnhan" required ng-minlength="1" name="mkxacnhan"
+                          placeholder="Mật khẩu">
+                      <label for="floatingPassword">Xác nhận mật khẩu</label>
+                      <div ng-show="sdmk.mkxacnhan.$invalid" class="font-italic">
+                        Vui lòng nhập mật khẩu
+                        </div>
+                  </div>
+  
+                  <div class="form-check mb-3">
+  
+                  </div>
+                  <div class="d-grid">
+                      <button ng-disabled="sdmk.$invalid" data-bs-dismiss="modal" ng-click="doimatkhau()"  class="btn btn-primary btn-login text-uppercase fw-bold w-100" type="submit" style="background-image: linear-gradient(310deg,#7928ca,#ff0080);" >
+                          Xác nhận
+                      </button>
+                  </div>
+                  
+              </form>
+          </div>
+        </div>
+  
+        <!-- Modal footer -->
+  
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="doiten">
+    <div class="modal-dialog">
+      <div class="modal-content" >
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Tài khoản</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5" style="color: #cb0c9f!important">Thay đổi  họ và tên</h5>
+              <form name="stk">
+                  <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="floatingPassword" ng-model="hotenmoi" required ng-minlength="1" name="sdht"
+                          placeholder="Mật khẩu">
+                      <label for="floatingPassword" >Họ và tên mới</label>
+                      <div ng-show="stk.sdht.$invalid" class="font-italic">
+                        Vui lòng nhập họ tên
+                </div>
+                  </div>
+
+  
+                  <div class="form-check mb-3">
+  
+                  </div>
+                  <div class="d-grid">
+                      <button ng-disabled="stk.$invalid" data-bs-dismiss="modal" ng-click="doihoten()" class="btn btn-primary btn-login text-uppercase fw-bold w-100" type="submit" style="background-image: linear-gradient(310deg,#7928ca,#ff0080);">
+                          Xác nhận
+                      </button>
+                  </div>
+                  
+              </form>
+          </div>
+        </div>
+  
+        <!-- Modal footer -->
+  
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="doiemail">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Tài khoản</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5" style="color: #cb0c9f!important">Thay đổi  Email</h5>
+              <form name="emailsd1">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingPassword" ng-model="emailcu" required ng-minlength="1" name="emailcu"
+                    placeholder="Mật khẩu">
+                <label for="floatingPassword" >Email cũ</label>
+                <div ng-show="emailsd1.emailcu.$invalid" class="font-italic">
+                  Vui lòng nhập Email
+          </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingPassword" ng-model="emailmoi" required ng-minlength="1" name="emailmoi"
+                    placeholder="Mật khẩu">
+                <label for="floatingPassword" >Email mới</label>
+                <div ng-show="emailsd1.emailcu.$invalid" class="font-italic">
+                  Vui lòng nhập Email
+          </div>
+                </div>
+  
+                  <div class="form-check mb-3">
+  
+                  </div>
+                  <div class="d-grid">
+                      <button ng-disabled="emailsd1.$invalid" data-bs-dismiss="modal" ng-click="doiemail()" class="btn btn-primary btn-login text-uppercase fw-bold w-100" type="submit" style="background-image: linear-gradient(310deg,#7928ca,#ff0080);">
+                          Xác nhận
+                      </button>
+                  </div>
+                  
+              </form>
+          </div>
+        </div>
+  
+        <!-- Modal footer -->
+  
+  
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal" id="doigioitinh">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Tài khoản</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5" style="color: #cb0c9f!important">Thay đổi giới tính</h5>
+              <form>
+                  <div class="form-floating mb-3">
+                    <div class="form-floating mb-3">
+                        <pre> Giới tính: Nam <input type="radio" name="Gender" id="" ng-model="gioitinh" ng-checked="true" value="true">  Nữ <input type="radio" ng-model="gioitinh" name="Gender" id="" value="false"> </pre>
+                    </div>
+                  </div>
+
+  
+                  <div class="form-check mb-3">
+  
+                  </div>
+                  <div class="d-grid">
+                      <button  data-bs-dismiss="modal" ng-click="doigioitinh()" class="btn btn-primary btn-login text-uppercase fw-bold w-100" type="submit" style="background-image: linear-gradient(310deg,#7928ca,#ff0080);">
+                          Xác nhận
+                      </button>
+                  </div>
+                  
+              </form>
+          </div>
+        </div>
+  
+        <!-- Modal footer -->
+  
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="doingaysinh">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Tài khoản</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5" style="color: #cb0c9f!important">Thay đổi Ngày sinh</h5>
+              <form name="datef">
+                  <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="floatingInput" required name="datec" ng-model="ngaysinhmoi"
+                    placeholder="name@example.com">
+                <label for="floatingInput">Ngày sinh</label>
+                <div ng-show="datef.datec.$invalid" class="font-italic">
+                    Vui lòng nhập họ tên
+            </div>
+                  </div>
+
+  
+                  <div class="form-check mb-3">
+  
+                  </div>
+                  <div class="d-grid">
+                      <button ng-disabled="datef.$invalid"  data-bs-dismiss="modal" ng-click="doingaysinh()" class="btn btn-primary btn-login text-uppercase fw-bold w-100" type="submit" style="background-image: linear-gradient(310deg,#7928ca,#ff0080);">
+                          Xác nhận
+                      </button>
+                  </div>
+                  
+              </form>
+          </div>
+        </div>
+  
+        <!-- Modal footer -->
+  
+  
+      </div>
+    </div>
+  </div>

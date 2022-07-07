@@ -1,0 +1,138 @@
+
+#navk {
+    border-radius: 40px;
+    backdrop-filter: saturate(200%) blur(30px);
+    background-color: hsla(0, 0%, 100%, .8) !important;
+    /* background-color: white; */
+    top: 5px;
+    /* position: absolute; */
+    /* position: sticky; */
+    position: fixed;
+    left: 16%;
+    /* text-align: center; */
+    /* opacity: 80%; */
+    box-shadow: 0px 3px 10px gainsboro;
+  
+  }
+.navbl{
+   float: left;
+   margin-left: 10px;
+
+}
+.navbc{
+    /* margin-left: 13%; */
+    margin: auto;
+    
+}
+.navbl1{
+  /* float: right; */
+  margin-right: 10px;
+}
+.gt1:hover{
+    background-color: rgba(235, 231, 231, 0.8)!important; 
+    /* margin-top: 0px; */
+}
+/* .danhmuc:hover{
+  color: rgb(247, 222, 142);
+
+} */
+.danhmuc:hover::before{
+  transform: translateX(110%);
+}
+
+.danhmuc:hover::after{
+    transition-duration: .15s;
+}
+.diamond {
+  width: 200px;
+  height: 200px;
+  background: #0062af;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  border-radius: 15px;
+  margin-left: 100%;
+}
+
+/* Nút bắt đầu thi */
+.startthi{
+    padding: 10px 20px;
+    /* border: 1px solid #333; */
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    height: 50px ;
+    width: 150px;
+    margin: auto;
+}
+
+.startthi:hover::before{
+    left: 0; 
+}
+
+.asdasd{            
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(310deg,#7928ca,#ff0080);
+    left: -100%;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.debaithi:hover  .asdasd{
+    left: 0;
+}
+
+#demo{
+  /* border-radius: 40px; */
+    backdrop-filter: saturate(200%) blur(30px);
+    background-color: hsla(0,0%,100%,.8)!important; 
+    border-bottom-right-radius: 40px;
+}
+.contactbanner1 {
+    /* position: relative; */
+    /* top: -700px; */
+    /* right: 1px; */
+    border-radius: 40px;
+    backdrop-filter: saturate(200%) blur(30px);
+    background-color: hsla(0, 0%, 100%, .8) !important;
+    box-shadow: 0px 3px 10px gainsboro;
+  }
+
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .btn-google {
+    color: white !important;
+    background-color: #ea4335;
+  }
+
+  .btn-facebook {
+    color: white !important;
+    background-color: #3b5998;
+  }
+  .modal-content{
+    border-radius: 40px;
+      backdrop-filter: saturate(200%) blur(30px);
+      background-color: hsla(0,0%,100%,.8)!important; 
+      /* box-shadow: 0px 3px 10px gainsboro; */
+  }
+
+  .sodiem{
+    
+			width: 180px;
+			height: 180px;
+			text-align: center;
+			padding: 50px;
+			-moz-border-radius: 100px;
+			-webkit-border-radius: 100px;
+			border-radius: 100px;
+		border: 5px #d75ae2 solid;
+  }

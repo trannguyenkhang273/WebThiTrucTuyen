@@ -1,0 +1,72 @@
+
+
+<div ng-include="'header.html'"></div>
+<div class="container" >
+<div class="row mt-5">
+    <div class="col-4" style="display: flex;font-size: large; margin-left: 5%; border: 3px salmon solid; width: auto; padding: 10px; height: 50px;" id="dongho3">
+      <span id="h">Giờ</span> :
+      <span id="m">Phút</span> :
+      <span id="s">Giây</span>
+    </div>
+    <div class="col-2"></div>
+    <div class=col-6>
+      <h2>{{tenMH}}</h2>
+    </div>
+</div>
+
+    <div class="row  mt-5" >
+        <div class="col-3 text-center sodiem"   >
+            <span class="h4" id="diembaithi"> {{diem}}</span>
+            <span class="h4"> / {{soluongcauhoi}} Điểm</span>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-8 mt-5" ng-repeat="ch in caccauhoi | limitTo:1:start "style="height: 300px;">
+            <h5 style="height: 50px;">Câu {{start +1}}: {{ch.Text}} </h6>
+                
+            <div style="{{dissablecauhoi(ch.Id)}}">
+                <div ng-repeat="pa in ch.Answers" >
+                    <input type="radio"  name="chon" value="{{pa.Id}}" ng-click="luudapan(ch.Id,pa.Id)" ng-checked="checkedRadio(pa.Id)"> {{pa.Text}}
+                </div>
+                <div class="col-12 row">
+                    <div class="col-4"></div>
+                    <button class="btn btn-primary btn-login text-uppercase fw-bold col-4 mt-5" 
+                    type="submit" style="background-image: linear-gradient(310deg,#7928ca,#ff0080);"
+                    ng-click="tinhdiem();disableradio(ch.Id)">
+                        Trả lời
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          
+            <div class="col-4" >
+              <button class="btn btn-primary"  style="margin-left: 8%; border: none;"  ng-click="ketthuc()">kết thúc</button>
+            </div>
+
+            <div class="col-3">
+               
+            </div>
+
+            <div class="col-2"></div>
+            <div class="col-3">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item {{disableLui}}" ng-click="luicauhoi()">
+                    <a class="page-link" >
+                      << </a>
+                  </li>
+                  <li class="page-item {{active1}}"><a class="page-link" ng-click="nextso1()">{{so1}}</a></li>
+                  <li class="page-item {{active2}}">
+                    <a class="page-link"  ng-click="nextso2()">{{so2}}</a>
+                  </li>
+                  <li class="page-item {{active3}}"><a class="page-link" ng-click="nextso3()">{{so3}}</a></li>
+                  <li class="page-item {{disableNext}}">
+                    <a class="page-link" ng-click="tiepcauhoi()" ng-click="nextso3()"> >> </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+    </div>
+
+</div>

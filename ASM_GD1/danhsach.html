@@ -1,0 +1,152 @@
+<HR>
+</HR>
+<h1 class="col-12 text-center">MÔN THI</h1>
+
+<div class="col-12 card-columns d-flex flex-row  " style="height: 400px; margin:0 auto;">
+  
+  <div class=" mt-3  col-3  " ng-repeat="mh in cacmonhoc | limitTo:4:start">
+    <a href="#!tracnghiem/{{mh.Id}}/{{mh.Name}}" style="text-decoration: none;"  id="dongho" onclick="setTimeout(start,100)">
+      <div class="card text-center text-dark  debaithi" style="height: 320px; width: 250px;  border-radius: 20px; box-shadow: 0px 0px 10px rgb(158, 152, 152);
+           ">
+
+        <img src="images/logos/{{mh.Logo}}" alt="" height="200px" style="border-radius: 20px;">
+        <div class="card-body">
+          <h6 class="text-dark">{{mh.Name}}</h6>
+          <div id="wrapper">
+            <a href="#!tracnghiem/{{mh.Id}}/{{mh.Name}}" class="startthi "
+              style="text-decoration: none;" id="dongho">
+              <div class="asdasd"  onclick="setTimeout(start,100)">Bắt đầu thi</div>
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- <div class=" mt-3  col-3  " >
+          <a href="#" style="text-decoration: none;">
+          <div class="card text-center text-dark  debaithi"  style="height: 300px; width: 250px;  border-radius: 20px; box-shadow: 0px 0px 10px rgb(158, 152, 152);
+           " >
+
+            <img src="images/logos/ADAV.jpg" alt="" height="200px" style="border-radius: 20px;">
+              <div class="card-body">
+                <h6 class="text-dark">Lập trình mobile</h6>
+               <div id="wrapper">
+                   <a href="#" class="startthi " style="text-decoration: none;">
+                        <div class="asdasd ">Bắt đầu thi</div>
+                       <span ></span>
+                   </a>
+               </div>
+              </div>
+          </div>
+          </a>
+        </div>
+
+        <div class=" mt-3  col-3  " >
+          <a href="#" style="text-decoration: none;">
+          <div class="card text-center text-dark  debaithi"  style="height: 300px; width: 250px;  border-radius: 20px; box-shadow: 0px 0px 10px rgb(158, 152, 152);
+           " >
+
+            <img src="images/logos/GAME.png" alt="" height="200px" style="border-radius: 20px;">
+              <div class="card-body">
+                <h6 class="text-dark">Lập trình game</h6>
+               <div id="wrapper">
+                   <a href="#" class="startthi " style="text-decoration: none;">
+                        <div class="asdasd ">Bắt đầu thi</div>
+                       <span ></span>
+                   </a>
+               </div>
+              </div>
+          </div>
+          </a>
+        </div>
+
+        <div class=" mt-3  col-3  " >
+          <a href="#" style="text-decoration: none;">
+          <div class="card text-center text-dark  debaithi"  style="height: 300px; width: 250px;  border-radius: 20px; box-shadow: 0px 0px 10px rgb(158, 152, 152);
+           " >
+
+            <img src="images/logos/PHPP.png" alt="" height="200px" style="border-radius: 20px;">
+              <div class="card-body">
+                <h6 class="text-dark">PHP</h6>
+               <div id="wrapper">
+                   <a href="#" class="startthi " style="text-decoration: none;">
+                        <div class="asdasd ">Bắt đầu thi</div>
+                       <span ></span>
+                   </a>
+               </div>
+              </div>
+          </div>
+          </a>
+        </div> -->
+
+
+</div>
+
+<br>
+<div class="row">
+  <div class="col-9"></div>
+
+  <div class="col-3">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item {{disableLui}} ">
+          <a class="page-link" href="#" ng-click="lui()">
+            << </a>
+        </li>
+        <li class="page-item {{active1}}"><a class="page-link" href="#" ng-click="nextso1()">{{so1}}</a></li>
+        <li class="page-item {{active2}}">
+          <a class="page-link" href="#" ng-click="nextso2()">{{so2}}</a>
+        </li>
+        <li class="page-item {{active3}}"><a class="page-link" href="#" ng-click="nextso3()">{{so3}}</a></li>
+        <li class="page-item {{disableNext}} ">
+          <a class="page-link" href="#" ng-click="tiep()">>> </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="modal" id="{{mh.Id}}" ng-repeat="mh in cacmonhoc">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Tài khoản</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="card-body p-2 p-sm-2  ">
+          
+          <div class="row">
+            <p class="col-2">Câu hỏi</p>
+            <div class="col-6"></div>
+            <div class="col-4">
+              
+            </div>
+
+          </div>
+          <form>
+            <input type="radio" name="traloi">
+            <br>
+            <input type="radio" name="traloi">
+            <br>
+            <input type="radio" name="traloi">
+            <br>
+            <input type="radio" name="traloi">
+            <br>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+
+
+    </div>
+  </div>
+</div>
+<script src="JS/asd.js"></script>
